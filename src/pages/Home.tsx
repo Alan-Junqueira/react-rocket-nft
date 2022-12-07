@@ -12,7 +12,7 @@ import HeaderImages from '../components/HeaderSection/HeaderImages';
 import { InfoSection } from '../components/InfoSection';
 import { PopularSection } from '../components/PopularSection';
 import { BestArtistisSection } from '../components/BestArtistsSection';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function Home() {
   useEffect(() => {
@@ -21,27 +21,37 @@ function Home() {
       distance: '50px',
       duration: 1000,
       reset: true
-    }).reveal(
-      '#infoSectionContainer'
-    );
+    }).reveal('#infoSectionContainer');
 
     ScrollReveal({
       origin: 'top',
       distance: '50px',
       duration: 1000,
       reset: true
-    }).reveal(
-      '#popularSectionContainer'
-    );
+    }).reveal('#popularSectionContainer');
 
     ScrollReveal({
       origin: 'right',
       distance: '50px',
       duration: 1000,
       reset: true
-    }).reveal(
-      '#bestArtistsSectionContainer'
-    );
+    }).reveal('#bestArtistsSectionContainer');
+  }, []);
+
+  const [infoContainerPositions, setInfoContainerPositions] = useState();
+
+  function getPositions() {
+    let element = document.querySelector('#bestArtistsSectionContainer');
+    if (element) {
+      let posicoes = element.getBoundingClientRect();
+
+      // console.log(posicoes)
+      console.log(window.scrollY > posicoes.top ? 'maior' : 'menor');
+    }
+  }
+
+  useEffect(() => {
+    getPositions();
   }, []);
 
   return (

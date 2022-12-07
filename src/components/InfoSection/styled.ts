@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const InfoSectionContainer = styled.section`
   display: grid;
   grid-template-columns: 12.125rem 1fr;
-  /* gap: 4.25rem; */
-
+  margin-left: -5rem;
+  padding-left: 5rem;
   border-bottom: 1px solid ${(props) => props.theme['gray-100']};
 `;
 

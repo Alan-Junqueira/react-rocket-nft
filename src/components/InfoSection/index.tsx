@@ -6,7 +6,6 @@ import {
 } from './styled';
 
 import bannerImage from '../../assets/banner.png';
-
 type InfoSectinProps = {
   scrollId: string
 }
