@@ -7,6 +7,9 @@ Landing page completa sobre NFTs, seguindo o layout disponibilizado no figma pel
   https://efficient-sloth-d85.notion.site/Desafio-Rocket-NFTs-3b5703b9f0e74cb19f34a8bfd14faacb
 ```
 
+### Layout Modelo
+![rocket-nft](https://user-images.githubusercontent.com/104371202/206190808-3000a352-ed18-4f3c-98b2-51b5a3353694.jpeg)
+
 ### 💻 Tecnologias usadas:
 - React Js
 - Typescript
